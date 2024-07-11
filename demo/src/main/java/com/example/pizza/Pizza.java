@@ -1,5 +1,4 @@
 package com.example.pizza;
-
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
@@ -14,14 +13,15 @@ import jakarta.persistence.Table;
 @Entity
 @Table(name="Pizzas")
 public class Pizza extends EntityBase{
- 
+
     private static final double PROFIT = 1.2D;
     private String name;   
     private String description;
     private String url;
     @ManyToMany
     private Set<Ingredient> ingredients;
- 
+
+
     protected Pizza(){
         super(null);
     }
@@ -68,7 +68,6 @@ public class Pizza extends EntityBase{
         //Lanzar evento
         return new Pizza(id, name, Description, url, new HashSet<>());
     }
-
     public static PizzaBuilder builder(){
         return new Builder();
     } 

@@ -19,7 +19,6 @@ public class Ingredient extends EntityBase {
         this.name = name;
         this.price = price;
     }
-
     public void update(String name,double price){
         //eventos
         this.name = name;
@@ -35,11 +34,11 @@ public class Ingredient extends EntityBase {
         //eventos
         return new Ingredient(id, name, price);
     }
-
     @Override
     public String toString() {
         return "Ingredient [name=" + name + ", price=" + price + ", getId()=" + getId() + "]";
     }
-
     
 }
+
+
